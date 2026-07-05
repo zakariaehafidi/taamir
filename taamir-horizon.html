@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Taamir Horizon Groupe BTP — Bâtiment & Travaux Publics à Casablanca</title>
+<meta name="description" content="Taamir Horizon Groupe BTP : Bâtiments, Travaux Publics, Génie Civil, Études & Ingénierie à Casablanca, Maroc. Bâtir aujourd'hui, construire demain.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "GeneralContractor",
+  "name": "Taamir Horizon Groupe BTP",
+  "slogan": "Bâtir aujourd'hui, construire demain",
+  "email": "contact@taamirhorizon.ma",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Casablanca",
+    "addressCountry": "MA"
+  },
+  "areaServed": "Maroc",
+  "knowsAbout": ["Bâtiments", "Travaux Publics", "Génie Civil", "Études et Ingénierie"]
+}
+</script>
+<style>
+/* ============ TOKENS ============ */
+:root{
+  --navy:#0D1B30;
+  --navy-deep:#081221;
+  --navy-2:#13253F;
+  --navy-3:#1A3050;
+  --gold:#D4A24C;
+  --gold-light:#E7C689;
+  --gold-dim:rgba(212,162,76,.35);
+  --gris:#6B7177;
+  --gris-light:#9BA1A6;
+  --blanc:#FFFFFF;
+  --paper:#F4F6F9;
+  --line-light:rgba(13,27,48,.12);
+  --line-dark:rgba(255,255,255,.10);
+  --display:'Cinzel',serif;
+  --body:'Montserrat',sans-serif;
+  --max:1200px;
+  --ease:cubic-bezier(.22,.61,.36,1);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);color:var(--navy);background:var(--blanc);line-height:1.7;font-size:16px;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
+
+::selection{background:var(--gold);color:var(--navy)}
+
+/* ============ UTILITAIRES ============ */
+.wrap{max-width:var(--max);margin:0 auto;padding:0 32px}
+.eyebrow{
+  font-family:var(--body);font-weight:600;font-size:.72rem;
+  letter-spacing:.28em;text-transform:uppercase;color:var(--gold);
+  display:flex;align-items:center;gap:14px;
+}
+.eyebrow::before{content:"";width:34px;height:1px;background:var(--gold)}
+h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.18}
+h2{font-size:clamp(1.7rem,3.4vw,2.6rem);letter-spacing:.01em}
+
+/* Ligne de cote — séparateur signature (dessin technique) */
+.cote{display:flex;align-items:center;gap:0;margin:26px 0 0;color:var(--gold);opacity:.9}
+.cote .tick{width:1px;height:14px;background:currentColor}
+.cote .bar{flex:0 0 96px;height:1px;background:currentColor;position:relative}
+.cote .val{font-size:.62rem;letter-spacing:.22em;font-weight:600;padding:0 12px;text-transform:uppercase;color:var(--gris)}
+.on-dark .cote .val{color:var(--gris-light)}
+
+/* Révélation au scroll */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+.reveal.in{opacity:1;transform:none}
+.d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}.d4{transition-delay:.32s}.d5{transition-delay:.40s}
+
+/* ============ HEADER ============ */
+header{
+  position:fixed;inset:0 0 auto;z-index:100;
+  transition:background .35s,box-shadow .35s,padding .35s;
+  padding:22px 0;
+}
+header.scrolled{background:rgba(8,18,33,.92);backdrop-filter:blur(12px);box-shadow:0 1px 0 var(--line-dark);padding:12px 0}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{display:flex;align-items:center;gap:14px;color:var(--blanc)}
+.brand svg{flex:none}
+.brand-name{font-family:var(--display);font-weight:700;font-size:1.02rem;letter-spacing:.06em;line-height:1.1}
+.brand-name em{font-style:normal;color:var(--gold)}
+.brand-sub{font-size:.56rem;letter-spacing:.42em;text-transform:uppercase;color:var(--gris-light);font-weight:600}
+.nav-links{display:flex;gap:34px;font-size:.8rem;font-weight:500;color:rgba(255,255,255,.82);letter-spacing:.04em}
+.nav-links a{position:relative;padding:6px 0;transition:color .25s}
+.nav-links a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:1px;background:var(--gold);transition:width .3s var(--ease)}
+.nav-links a:hover{color:var(--blanc)}
+.nav-links a:hover::after{width:100%}
+.btn{
+  display:inline-flex;align-items:center;gap:10px;
+  font-family:var(--body);font-weight:600;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;
+  padding:14px 26px;border:1px solid var(--gold);color:var(--navy);background:var(--gold);
+  transition:background .3s,color .3s,transform .3s var(--ease),box-shadow .3s;cursor:pointer;
+}
+.btn:hover{background:var(--gold-light);border-color:var(--gold-light);transform:translateY(-2px);box-shadow:0 10px 28px rgba(212,162,76,.28)}
+.btn.ghost{background:transparent;color:var(--blanc);border-color:rgba(255,255,255,.35)}
+.btn.ghost:hover{border-color:var(--gold);color:var(--gold);background:transparent;box-shadow:none}
+.btn.on-light{color:var(--navy)}
+.menu-toggle{display:none;background:none;border:none;color:var(--blanc);cursor:pointer;padding:8px}
+
+/* ============ HERO ============ */
+.hero{
+  position:relative;min-height:100svh;display:flex;flex-direction:column;justify-content:center;
+  background:
+    radial-gradient(1100px 600px at 78% 18%,rgba(212,162,76,.10),transparent 60%),
+    linear-gradient(180deg,var(--navy-deep) 0%,var(--navy) 55%,#0A1626 100%);
+  color:var(--blanc);overflow:hidden;
+}
+/* trame de calque technique */
+.hero::before{
+  content:"";position:absolute;inset:0;pointer-events:none;opacity:.55;
+  background-image:
+    linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px),
+    linear-gradient(rgba(255,255,255,.018) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.018) 1px,transparent 1px);
+  background-size:120px 120px,120px 120px,24px 24px,24px 24px;
+}
+.hero-inner{position:relative;z-index:2;padding-top:120px;padding-bottom:220px}
+.hero .eyebrow{margin-bottom:26px}
+.hero h1{
+  font-size:clamp(2.2rem,5.6vw,4.3rem);font-weight:600;max-width:15ch;letter-spacing:.01em;
+}
+.hero h1 .gold{color:var(--gold)}
+.hero p.lede{
+  margin-top:26px;max-width:52ch;color:rgba(255,255,255,.78);
+  font-size:clamp(.95rem,1.4vw,1.08rem);font-weight:300;line-height:1.85;
+}
+.hero-cta{display:flex;gap:16px;margin-top:44px;flex-wrap:wrap}
+/* skyline en construction */
+.skyline{position:absolute;left:0;right:0;bottom:0;z-index:1;pointer-events:none}
+.skyline svg{display:block;width:100%;height:auto}
+.skyline .b{transform-origin:bottom;transform:scaleY(0);animation:rise 1.1s var(--ease) forwards}
+@keyframes rise{to{transform:scaleY(1)}}
+.horizon-line{position:absolute;bottom:0;left:0;height:2px;background:linear-gradient(90deg,var(--gold),var(--gold-light));width:0;animation:draw 1.6s .4s var(--ease) forwards;z-index:2}
+@keyframes draw{to{width:100%}}
+.scroll-hint{
+  position:absolute;bottom:34px;right:40px;z-index:3;color:var(--gris-light);
+  font-size:.62rem;letter-spacing:.3em;text-transform:uppercase;writing-mode:vertical-rl;
+  display:flex;align-items:center;gap:12px;
+}
+.scroll-hint::after{content:"";width:1px;height:48px;background:linear-gradient(var(--gold),transparent);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+
+/* ============ MANIFESTE ============ */
+.manifesto{background:var(--blanc);padding:130px 0 110px;position:relative}
+.manifesto .wrap{max-width:980px}
+.manifesto blockquote{
+  font-family:var(--display);font-weight:500;
+  font-size:clamp(1.5rem,3.2vw,2.5rem);line-height:1.45;color:var(--navy);
+}
+.manifesto blockquote .gold{color:var(--gold)}
+.manifesto .attribution{margin-top:34px;display:flex;align-items:center;gap:16px;color:var(--gris);font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;font-weight:600}
+.manifesto .attribution::before{content:"";width:48px;height:1px;background:var(--gold)}
+
+/* ============ MÉTIERS (LOTS) ============ */
+.metiers{background:var(--paper);padding:120px 0;position:relative;overflow:hidden}
+.metiers::before{
+  content:"";position:absolute;inset:0;pointer-events:none;opacity:.5;
+  background-image:linear-gradient(var(--line-light) 1px,transparent 1px),linear-gradient(90deg,var(--line-light) 1px,transparent 1px);
+  background-size:120px 120px;mask-image:linear-gradient(180deg,transparent,black 30%,black 70%,transparent);
+}
+.sec-head{position:relative;z-index:1;max-width:640px;margin-bottom:70px}
+.sec-head h2{margin-top:18px}
+.sec-head p{margin-top:18px;color:var(--gris);font-weight:400}
+.lots{position:relative;z-index:1;display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line-light);border:1px solid var(--line-light)}
+.lot{
+  background:var(--blanc);padding:46px 34px 42px;position:relative;
+  transition:transform .4s var(--ease),box-shadow .4s var(--ease);
+}
+.lot:hover{transform:translateY(-8px);box-shadow:0 24px 48px rgba(13,27,48,.12);z-index:2}
+.lot::after{
+  content:"";position:absolute;left:0;right:0;bottom:0;height:3px;
+  background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .45s var(--ease);
+}
+.lot:hover::after{transform:scaleX(1)}
+.lot-num{
+  font-family:var(--body);font-size:.62rem;font-weight:600;letter-spacing:.3em;
+  color:var(--gris);text-transform:uppercase;display:flex;align-items:center;gap:10px;
+}
+.lot-num::after{content:"";flex:1;height:1px;background:var(--line-light)}
+.lot-icon{margin:30px 0 22px;color:var(--navy)}
+.lot:hover .lot-icon{color:var(--gold)}
+.lot-icon svg{transition:color .35s}
+.lot h3{font-size:1.08rem;letter-spacing:.03em;line-height:1.35}
+.lot p{margin-top:14px;font-size:.86rem;color:var(--gris);line-height:1.75}
+
+/* ============ MÉTHODE ============ */
+.methode{background:var(--navy);color:var(--blanc);padding:130px 0;position:relative;overflow:hidden}
+.methode::before{
+  content:"";position:absolute;inset:0;opacity:.4;pointer-events:none;
+  background-image:linear-gradient(var(--line-dark) 1px,transparent 1px),linear-gradient(90deg,var(--line-dark) 1px,transparent 1px);
+  background-size:120px 120px;mask-image:radial-gradient(800px 500px at 20% 30%,black,transparent);
+}
+.methode .sec-head p{color:var(--gris-light)}
+.phases{position:relative;z-index:1;display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:20px}
+.phase{position:relative;padding:38px 30px 0 0}
+.phase::before{
+  content:"";position:absolute;top:0;left:0;right:0;height:1px;background:var(--line-dark);
+}
+.phase::after{
+  content:"";position:absolute;top:-5px;left:0;width:11px;height:11px;border-radius:50%;
+  background:var(--navy);border:2px solid var(--gold);
+}
+.phase-num{font-family:var(--display);font-size:2.2rem;color:var(--gold);font-weight:600;line-height:1}
+.phase h3{margin-top:16px;font-size:1rem;letter-spacing:.04em}
+.phase p{margin-top:12px;font-size:.85rem;color:var(--gris-light);line-height:1.75;font-weight:300}
+
+/* ============ VALEURS ============ */
+.valeurs{background:var(--blanc);padding:120px 0}
+.val-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:40px 28px;margin-top:20px}
+.val{text-align:left;padding-top:26px;border-top:1px solid var(--line-light);position:relative}
+.val::before{content:"";position:absolute;top:-1px;left:0;width:34px;height:2px;background:var(--gold)}
+.val-ic{color:var(--gold);margin-bottom:18px}
+.val h3{font-size:.95rem;letter-spacing:.05em}
+.val p{margin-top:10px;font-size:.82rem;color:var(--gris);line-height:1.7}
+
+/* ============ RÉALISATIONS ============ */
+.realisations{background:var(--paper);padding:120px 0}
+.re-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:10px}
+.re-card{
+  position:relative;aspect-ratio:4/3;overflow:hidden;background:var(--navy);
+  display:flex;flex-direction:column;justify-content:flex-end;padding:28px;color:var(--blanc);
+  transition:transform .4s var(--ease),box-shadow .4s var(--ease);
+}
+.re-card:hover{transform:translateY(-6px);box-shadow:0 26px 52px rgba(13,27,48,.22)}
+/* hachure de plan = emplacement photo à remplacer */
+.re-card .ph{
+  position:absolute;inset:0;
+  background:
+    linear-gradient(180deg,rgba(13,27,48,.2),rgba(8,18,33,.85)),
+    repeating-linear-gradient(45deg,rgba(255,255,255,.05) 0 1px,transparent 1px 14px),
+    linear-gradient(160deg,var(--navy-2),var(--navy-deep));
+}
+.re-card .tag{
+  position:absolute;top:20px;left:20px;font-size:.58rem;font-weight:600;
+  letter-spacing:.24em;text-transform:uppercase;color:var(--gold);
+  border:1px solid var(--gold-dim);padding:7px 12px;background:rgba(8,18,33,.5);backdrop-filter:blur(4px);
+}
+.re-card h3{position:relative;font-size:1.02rem;letter-spacing:.03em}
+.re-card span{position:relative;margin-top:6px;font-size:.72rem;color:var(--gris-light);letter-spacing:.14em;text-transform:uppercase;font-weight:500}
+.re-note{
+  margin-top:34px;display:flex;gap:14px;align-items:flex-start;
+  font-size:.8rem;color:var(--gris);max-width:640px;line-height:1.7;
+}
+.re-note svg{flex:none;margin-top:2px;color:var(--gold)}
+
+/* ============ CTA DEVIS ============ */
+.cta-band{
+  background:linear-gradient(120deg,var(--navy-deep),var(--navy) 60%,#14284A);
+  color:var(--blanc);padding:110px 0;position:relative;overflow:hidden;
+}
+.cta-band::after{
+  content:"";position:absolute;top:0;bottom:0;right:-120px;width:520px;
+  background:radial-gradient(closest-side,rgba(212,162,76,.16),transparent);
+}
+.cta-inner{display:flex;align-items:center;justify-content:space-between;gap:48px;flex-wrap:wrap;position:relative;z-index:1}
+.cta-inner h2{max-width:22ch}
+.cta-inner p{margin-top:16px;color:var(--gris-light);max-width:46ch;font-weight:300}
+
+/* ============ CONTACT ============ */
+.contact{background:var(--blanc);padding:120px 0}
+.contact-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:70px;margin-top:10px}
+.info-item{display:flex;gap:18px;padding:22px 0;border-bottom:1px solid var(--line-light)}
+.info-item svg{flex:none;color:var(--gold);margin-top:3px}
+.info-item b{display:block;font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gris);font-weight:600;margin-bottom:5px}
+.info-item span{font-size:.95rem;font-weight:500}
+form{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.field{display:flex;flex-direction:column;gap:8px}
+.field.full{grid-column:1/-1}
+label{font-size:.7rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--gris)}
+input,select,textarea{
+  font-family:var(--body);font-size:.92rem;color:var(--navy);
+  border:1px solid var(--line-light);background:var(--paper);
+  padding:15px 16px;transition:border-color .25s,background .25s;border-radius:0;
+}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--gold);background:var(--blanc)}
+textarea{resize:vertical;min-height:130px}
+form .btn{grid-column:1/-1;justify-self:start}
+
+/* ============ FOOTER ============ */
+footer{background:var(--navy-deep);color:var(--gris-light);padding:80px 0 0;position:relative}
+footer::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--gold),transparent 60%)}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:56px;padding-bottom:64px}
+.foot-grid .brand{margin-bottom:20px}
+.foot-grid p{font-size:.85rem;font-weight:300;max-width:38ch;line-height:1.8}
+.foot-grid h4{color:var(--blanc);font-family:var(--body);font-size:.72rem;font-weight:600;letter-spacing:.26em;text-transform:uppercase;margin-bottom:22px}
+.foot-grid li{margin-bottom:12px;font-size:.86rem}
+.foot-grid li a{transition:color .25s}
+.foot-grid li a:hover{color:var(--gold)}
+.foot-bottom{border-top:1px solid var(--line-dark);padding:26px 0;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:.72rem;letter-spacing:.08em}
+.foot-bottom .slogan{color:var(--gold);font-style:italic}
+
+/* ============ RESPONSIVE ============ */
+@media (max-width:1024px){
+  .lots{grid-template-columns:repeat(2,1fr)}
+  .phases{grid-template-columns:repeat(2,1fr);gap:44px 32px}
+  .val-grid{grid-template-columns:repeat(3,1fr)}
+  .re-grid{grid-template-columns:repeat(2,1fr)}
+  .contact-grid{grid-template-columns:1fr;gap:52px}
+  .foot-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:720px){
+  .nav-links,.nav .btn{display:none}
+  .menu-toggle{display:block}
+  .nav-links.open{
+    display:flex;position:fixed;inset:0;background:var(--navy-deep);
+    flex-direction:column;align-items:center;justify-content:center;gap:30px;font-size:1.05rem;z-index:99;
+  }
+  .lots,.val-grid,.re-grid,.phases{grid-template-columns:1fr}
+  form{grid-template-columns:1fr}
+  .foot-grid{grid-template-columns:1fr;gap:40px}
+  .scroll-hint{display:none}
+  .hero-inner{padding-bottom:160px}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}
+  .reveal{opacity:1;transform:none}
+  .skyline .b{transform:scaleY(1)}
+  .horizon-line{width:100%}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header id="header">
+  <div class="wrap nav">
+    <a href="#" class="brand" aria-label="Taamir Horizon — Accueil">
+      <svg width="38" height="38" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+        <rect x="8" y="14" width="7" height="24" fill="#FFFFFF"/>
+        <rect x="18" y="6" width="7" height="32" fill="#D4A24C"/>
+        <rect x="28" y="18" width="7" height="20" fill="#FFFFFF"/>
+        <path d="M4 42 Q24 34 44 42" stroke="#D4A24C" stroke-width="2.5" fill="none"/>
+      </svg>
+      <span>
+        <span class="brand-name">TAAMIR <em>HORIZON</em></span><br>
+        <span class="brand-sub">Groupe BTP</span>
+      </span>
+    </a>
+    <nav class="nav-links" id="navLinks" aria-label="Navigation principale">
+      <a href="#metiers">Nos métiers</a>
+      <a href="#methode">Notre méthode</a>
+      <a href="#valeurs">Valeurs</a>
+      <a href="#realisations">Réalisations</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a href="#contact" class="btn">Demander un devis</a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Ouvrir le menu">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <div class="wrap hero-inner">
+    <p class="eyebrow">Casablanca · Maroc — Bâtiment & Travaux Publics</p>
+    <h1>Bâtir aujourd'hui, <span class="gold">construire demain.</span></h1>
+    <p class="lede">Taamir Horizon Groupe BTP incarne l'expertise, la fiabilité et l'ambition dans le domaine du Bâtiment et des Travaux Publics. De l'étude à la livraison, nous concevons et réalisons des ouvrages durables, avec une vision tournée vers l'avenir.</p>
+    <div class="hero-cta">
+      <a href="#contact" class="btn">Demander un devis</a>
+      <a href="#metiers" class="btn ghost">Découvrir nos métiers</a>
+    </div>
+  </div>
+  <div class="skyline" aria-hidden="true">
+    <svg viewBox="0 0 1440 190" preserveAspectRatio="none">
+      <g fill="#0A1830">
+        <rect class="b" x="0"    y="90"  width="70"  height="100" style="animation-delay:.15s"/>
+        <rect class="b" x="80"  y="55"  width="55"  height="135" style="animation-delay:.30s"/>
+        <rect class="b" x="145" y="110" width="90"  height="80"  style="animation-delay:.10s"/>
+        <rect class="b" x="245" y="30"  width="48"  height="160" style="animation-delay:.45s"/>
+        <rect class="b" x="303" y="80"  width="70"  height="110" style="animation-delay:.25s"/>
+        <rect class="b" x="385" y="120" width="110" height="70"  style="animation-delay:.05s"/>
+        <rect class="b" x="505" y="60"  width="52"  height="130" style="animation-delay:.40s"/>
+        <rect class="b" x="567" y="95"  width="80"  height="95"  style="animation-delay:.20s"/>
+        <rect class="b" x="660" y="20"  width="44"  height="170" style="animation-delay:.55s"/>
+        <rect class="b" x="714" y="70"  width="66"  height="120" style="animation-delay:.32s"/>
+        <rect class="b" x="792" y="115" width="95"  height="75"  style="animation-delay:.12s"/>
+        <rect class="b" x="898" y="45"  width="50"  height="145" style="animation-delay:.48s"/>
+        <rect class="b" x="958" y="88"  width="76"  height="102" style="animation-delay:.22s"/>
+        <rect class="b" x="1046" y="125" width="100" height="65" style="animation-delay:.08s"/>
+        <rect class="b" x="1158" y="58" width="54"  height="132" style="animation-delay:.38s"/>
+        <rect class="b" x="1222" y="98" width="82"  height="92"  style="animation-delay:.18s"/>
+        <rect class="b" x="1316" y="36" width="46"  height="154" style="animation-delay:.50s"/>
+        <rect class="b" x="1372" y="86" width="68"  height="104" style="animation-delay:.28s"/>
+      </g>
+      <!-- grue stylisée -->
+      <g class="b" style="animation-delay:.65s" stroke="#D4A24C" stroke-width="2" fill="none" opacity=".85">
+        <path d="M690 190 V38 M690 38 H780 M690 38 L662 60 M740 38 V64"/>
+        <rect x="734" y="64" width="12" height="10" fill="#D4A24C" stroke="none"/>
+      </g>
+    </svg>
+  </div>
+  <div class="horizon-line" aria-hidden="true"></div>
+  <div class="scroll-hint">Défiler</div>
+</section>
+
+<!-- ================= MANIFESTE ================= -->
+<section class="manifesto">
+  <div class="wrap">
+    <blockquote class="reveal">« Nous bâtissons plus que des ouvrages, <span class="gold">nous construisons la confiance.</span> »</blockquote>
+    <div class="attribution reveal d1">Taamir Horizon Groupe BTP</div>
+    <div class="cote reveal d2" aria-hidden="true">
+      <span class="tick"></span><span class="bar"></span><span class="tick"></span>
+      <span class="val">Expertise · Fiabilité · Ambition</span>
+      <span class="tick"></span><span class="bar"></span><span class="tick"></span>
+    </div>
+  </div>
+</section>
+
+<!-- ================= MÉTIERS ================= -->
+<section class="metiers" id="metiers">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Nos métiers</p>
+      <h2>Quatre expertises, une même exigence</h2>
+      <p>Du gros œuvre aux infrastructures, de la conception au chantier : nos quatre pôles couvrent l'ensemble du cycle de vie d'un projet de construction.</p>
+    </div>
+    <div class="lots">
+      <article class="lot reveal">
+        <div class="lot-num">Lot 01</div>
+        <div class="lot-icon"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M6 21V8l6-4 6 4v13"/><path d="M2 21h20"/><path d="M9 21v-4h6v4"/><path d="M9 11h.01M15 11h.01M9 14h.01M15 14h.01"/></svg></div>
+        <h3>Bâtiments</h3>
+        <p>Construction de bâtiments résidentiels, tertiaires et industriels. Gros œuvre, second œuvre et finitions, menés avec des standards de qualité élevés à chaque étape.</p>
+      </article>
+      <article class="lot reveal d1">
+        <div class="lot-num">Lot 02</div>
+        <div class="lot-icon"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M2 18h20"/><path d="M4 18c1.5-4 3-6 5-9M20 18c-1.5-4-3-6-5-9"/><path d="M7 18v-4M12 18v-6M17 18v-4"/><path d="M9 9h6"/></svg></div>
+        <h3>Travaux Publics</h3>
+        <p>Voirie, réseaux divers, terrassements et aménagements urbains. Des infrastructures qui relient les territoires et accompagnent le développement du Maroc.</p>
+      </article>
+      <article class="lot reveal d2">
+        <div class="lot-num">Lot 03</div>
+        <div class="lot-icon"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="12" r="3.2"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9L17 7M7 17l-2.1 2.1"/></svg></div>
+        <h3>Génie Civil</h3>
+        <p>Ouvrages d'art, structures en béton armé et fondations spéciales. La maîtrise technique au service d'ouvrages solides, sûrs et durables.</p>
+      </article>
+      <article class="lot reveal d3">
+        <div class="lot-num">Lot 04</div>
+        <div class="lot-icon"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M15.5 3.5l5 5L8 21H3v-5L15.5 3.5z"/><path d="M13 6l5 5"/><path d="M6 15l3 3"/></svg></div>
+        <h3>Études & Ingénierie</h3>
+        <p>Études techniques, dimensionnement, planification et pilotage de projets. Chaque ouvrage commence par une conception rigoureuse et documentée.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= MÉTHODE ================= -->
+<section class="methode on-dark" id="methode">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Notre méthode</p>
+      <h2>Un projet maîtrisé, de l'étude à la livraison</h2>
+      <p>Une entreprise jeune n'a qu'une seule façon de gagner la confiance : la rigueur. Notre méthode en quatre phases garantit transparence et maîtrise à chaque jalon.</p>
+    </div>
+    <div class="phases">
+      <div class="phase reveal">
+        <div class="phase-num">I</div>
+        <h3>Étude & Conception</h3>
+        <p>Analyse du besoin, études techniques, chiffrage détaillé et planification. Un devis clair, sans zone d'ombre.</p>
+      </div>
+      <div class="phase reveal d1">
+        <div class="phase-num">II</div>
+        <h3>Préparation</h3>
+        <p>Installation de chantier, plan de sécurité, approvisionnements et coordination des équipes et sous-traitants.</p>
+      </div>
+      <div class="phase reveal d2">
+        <div class="phase-num">III</div>
+        <h3>Exécution</h3>
+        <p>Réalisation des travaux avec contrôle qualité continu, reporting régulier et respect strict des délais engagés.</p>
+      </div>
+      <div class="phase reveal d3">
+        <div class="phase-num">IV</div>
+        <h3>Livraison & Suivi</h3>
+        <p>Réception de l'ouvrage, levée des réserves et accompagnement après livraison. Notre engagement ne s'arrête pas à la remise des clés.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= VALEURS ================= -->
+<section class="valeurs" id="valeurs">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Nos valeurs</p>
+      <h2>Ce qui guide chacun de nos chantiers</h2>
+    </div>
+    <div class="val-grid">
+      <div class="val reveal">
+        <div class="val-ic"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6l8-4z"/><path d="M9 12l2 2 4-4"/></svg></div>
+        <h3>Sécurité</h3>
+        <p>Notre priorité sur chaque chantier, pour nos équipes comme pour nos partenaires.</p>
+      </div>
+      <div class="val reveal d1">
+        <div class="val-ic"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="9" r="6"/><path d="M8.5 14.5L7 22l5-3 5 3-1.5-7.5"/></svg></div>
+        <h3>Qualité</h3>
+        <p>Des standards élevés à chaque étape, du premier plan à la dernière finition.</p>
+      </div>
+      <div class="val reveal d2">
+        <div class="val-ic"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M11 17l-4 4v-4H5a2 2 0 01-2-2V5a2 2 0 012-2h14a2 2 0 012 2v10a2 2 0 01-2 2h-8z"/><path d="M8 9h8M8 12h5"/></svg></div>
+        <h3>Intégrité</h3>
+        <p>Transparence et respect de nos engagements, envers nos clients et nos équipes.</p>
+      </div>
+      <div class="val reveal d3">
+        <div class="val-ic"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22c5-3 8-7 8-12a8 8 0 10-16 0c0 5 3 9 8 12z" transform="rotate(180 12 12)"/><path d="M12 8v8M9 11c1.5 1 4.5 1 6 0"/></svg></div>
+        <h3>Durabilité</h3>
+        <p>Construire aujourd'hui pour demain : des ouvrages pensés pour durer.</p>
+      </div>
+      <div class="val reveal d4">
+        <div class="val-ic"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="8" cy="8" r="3"/><circle cx="16" cy="8" r="3"/><path d="M2 20c0-3 2.5-5 6-5s6 2 6 5M14 15.5c3-.5 8 .5 8 4.5"/></svg></div>
+        <h3>Esprit d'équipe</h3>
+        <p>La force du collectif au service de vos projets, sur le terrain comme au bureau.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= RÉALISATIONS ================= -->
+<section class="realisations" id="realisations">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Réalisations</p>
+      <h2>Nos projets, notre meilleure signature</h2>
+      <p>Chaque ouvrage livré raconte notre exigence. Retrouvez ici nos chantiers en cours et nos premières références.</p>
+    </div>
+    <div class="re-grid">
+      <article class="re-card reveal">
+        <div class="ph" aria-hidden="true"></div>
+        <span class="tag">Photo de chantier à venir</span>
+        <h3>Projet résidentiel — Casablanca</h3>
+        <span>Bâtiments · En cours</span>
+      </article>
+      <article class="re-card reveal d1">
+        <div class="ph" aria-hidden="true"></div>
+        <span class="tag">Photo de chantier à venir</span>
+        <h3>Aménagement de voirie</h3>
+        <span>Travaux Publics · En cours</span>
+      </article>
+      <article class="re-card reveal d2">
+        <div class="ph" aria-hidden="true"></div>
+        <span class="tag">Photo de chantier à venir</span>
+        <h3>Ouvrage en béton armé</h3>
+        <span>Génie Civil · Étude</span>
+      </article>
+    </div>
+    <div class="re-note reveal">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M12 8v5M12 16h.01"/></svg>
+      <span><strong>Note :</strong> ces emplacements sont prévus pour vos photos réelles de chantiers. Remplacez les intitulés par vos vrais projets dès qu'ils sont disponibles — c'est ce qui donnera toute sa crédibilité au site.</span>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CTA ================= -->
+<section class="cta-band">
+  <div class="wrap cta-inner">
+    <div class="reveal">
+      <p class="eyebrow">Votre projet commence ici</p>
+      <h2 style="margin-top:18px">Parlons de votre prochain ouvrage.</h2>
+      <p>Décrivez-nous votre projet — nous revenons vers vous avec une première analyse et un devis détaillé.</p>
+    </div>
+    <a href="#contact" class="btn reveal d1">Demander un devis</a>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Contact</p>
+      <h2>Demande de devis & renseignements</h2>
+    </div>
+    <div class="contact-grid">
+      <div class="reveal">
+        <div class="info-item">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 4h16v16H4z" opacity="0"/><path d="M22 6l-10 7L2 6"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg>
+          <div><b>Email</b><span>contact@taamirhorizon.ma</span></div>
+        </div>
+        <div class="info-item">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-7-6.2-7-11a7 7 0 1114 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>
+          <div><b>Adresse</b><span>Casablanca, Maroc</span></div>
+        </div>
+        <div class="info-item">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.13.96.36 1.9.7 2.8a2 2 0 01-.45 2.1L8.1 9.9a16 16 0 006 6l1.3-1.3a2 2 0 012.1-.45c.9.34 1.84.57 2.8.7A2 2 0 0122 16.9z"/></svg>
+          <div><b>Téléphone</b><span>+212 · à compléter</span></div>
+        </div>
+        <div class="info-item">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          <div><b>Horaires</b><span>Lun – Ven · 8h30 – 18h00</span></div>
+        </div>
+      </div>
+      <form class="reveal d1" action="mailto:contact@taamirhorizon.ma" method="post" enctype="text/plain">
+        <div class="field">
+          <label for="nom">Nom complet</label>
+          <input id="nom" name="nom" type="text" placeholder="Votre nom" required>
+        </div>
+        <div class="field">
+          <label for="tel">Téléphone</label>
+          <input id="tel" name="telephone" type="tel" placeholder="+212 ...">
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" placeholder="vous@exemple.ma" required>
+        </div>
+        <div class="field">
+          <label for="type">Type de projet</label>
+          <select id="type" name="type">
+            <option>Bâtiments</option>
+            <option>Travaux Publics</option>
+            <option>Génie Civil</option>
+            <option>Études & Ingénierie</option>
+            <option>Autre</option>
+          </select>
+        </div>
+        <div class="field full">
+          <label for="msg">Votre projet</label>
+          <textarea id="msg" name="message" placeholder="Décrivez brièvement votre projet : nature de l'ouvrage, localisation, échéance souhaitée…" required></textarea>
+        </div>
+        <button class="btn on-light" type="submit">Envoyer la demande</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a href="#" class="brand">
+          <svg width="34" height="34" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+            <rect x="8" y="14" width="7" height="24" fill="#FFFFFF"/>
+            <rect x="18" y="6" width="7" height="32" fill="#D4A24C"/>
+            <rect x="28" y="18" width="7" height="20" fill="#FFFFFF"/>
+            <path d="M4 42 Q24 34 44 42" stroke="#D4A24C" stroke-width="2.5" fill="none"/>
+          </svg>
+          <span>
+            <span class="brand-name">TAAMIR <em>HORIZON</em></span><br>
+            <span class="brand-sub">Groupe BTP</span>
+          </span>
+        </a>
+        <p style="margin-top:18px">Expertise, fiabilité et ambition dans le Bâtiment et les Travaux Publics, au service des projets publics et privés au Maroc.</p>
+      </div>
+      <div>
+        <h4>Nos métiers</h4>
+        <ul>
+          <li><a href="#metiers">Bâtiments</a></li>
+          <li><a href="#metiers">Travaux Publics</a></li>
+          <li><a href="#metiers">Génie Civil</a></li>
+          <li><a href="#metiers">Études & Ingénierie</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li>contact@taamirhorizon.ma</li>
+          <li>Casablanca, Maroc</li>
+          <li><a href="#contact">Demander un devis</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Taamir Horizon Groupe BTP — Tous droits réservés</span>
+      <span class="slogan">Bâtir aujourd'hui, construire demain.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Header au scroll
+const header=document.getElementById('header');
+addEventListener('scroll',()=>{header.classList.toggle('scrolled',scrollY>40)},{passive:true});
+
+// Menu mobile
+const toggle=document.getElementById('menuToggle'),links=document.getElementById('navLinks');
+toggle.addEventListener('click',()=>links.classList.toggle('open'));
+links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>links.classList.remove('open')));
+
+// Révélations au scroll
+const io=new IntersectionObserver(es=>{
+  es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})
+},{threshold:.12,rootMargin:'0px 0px -6% 0px'});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
